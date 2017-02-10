@@ -221,12 +221,17 @@ padding-top: 115px;
   width :960px;
   margin: 20px auto;
 }
+.kuang6:after{
+  content: "";
+  display: block;
+  clear: both;
+}
 .kuang6 p{
   color: #ccc;
   text-align: center;
   font-size: 100px;
   font-weight: bold;
-  padding-top: 127px;
+  /*padding-top: 127px;*/
 }
 .shuru1 input{
   padding: 20px;
@@ -258,6 +263,7 @@ padding-top: 115px;
   top: 20px;
   left: 505px;
   height: 30px;
+  float: right;
 }
 .anniu input{
   padding: 20px 33px;
