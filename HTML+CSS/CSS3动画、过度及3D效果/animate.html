@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS3</title>
+    <style media="screen">
+    #ct{
+      position: relative;
+    }
+      .box1{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        border: 2px solid #ccc;
+        border-radius: 25px;
+        -moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */
+        box-shadow: 10px 10px 5px #888888;
+        text-shadow: 10px 10px 5px white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 200px;
+        display: inline-block;;
+      }
+      .box2{
+        border: 1px solid #ccc;
+        transform: rotate(9deg);
+        width:200px;
+        height: 200px;
+        background-color: yellow;
+        display: inline-block;
+        font-size: 50px;
+        font-weight: bold;
+        position: absolute;
+        left: 350px;
+        top: 30px;
+      }
+      .box3{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border: 2px solid #ccc;
+        border-radius: 25px;
+        display: inline-block;
+        animation:myfirst 5s;
+        -webkit-animation:myfirst 5s;
+        position: absolute;
+        left: 710px;
+        color: white;
+        text-align: center;
+        line-height: 200px;
+        font-size: 50px;
+      }
+      @keyframes myfirst
+        {
+        0%   {background: red; left:710px; top:0px;}
+        25%  {background: yellow; left:910px; top:0px;}
+        50%  {background: blue; left:910px; top:200px;}
+        75%  {background: green; left:710px; top:200px;}
+        100% {background: red; left:710px; top:0px;}
+        }
+      .box4{
+        border: 1px solid #ccc;
+        width: 200px;
+        height: 200px;
+        background: blue;
+        transition:width 2s, height 2s;
+        -webkit-transition:width 2s, height 2s, -webkit-transform 2s;
+        position: absolute;
+        top:300px;
+        color: white;
+        text-align: center;
+        line-height: 200px;
+        font-size: 50px;
+      }
+      .box4:hover
+      {
+      width:400px;
+      height:400px;
+      transform:rotate(180deg);
+      -webkit-transform:rotate(180deg); /* Safari and Chrome */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ct">
+      <div class="box1">阴影哦!</div>
+      <div class="box2">哎呀，挂歪了...</div>
+      <div class="box3">3D旋转</div>
+      <div class="box4">碰我一下试试！</div>
+
+    </div>
+  </body>
+</html>
