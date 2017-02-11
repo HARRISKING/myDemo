@@ -9,7 +9,7 @@ html,body{
 #header{
   background: #222;
 }
-#header .kuang0{
+#header .ct0{
   width: 960px;
   margin: 0 auto;
 }
@@ -19,7 +19,7 @@ html,body{
   position: absolute;
   z-index: 10;
 }
-.kuang0:after{
+.ct0:after{
   content: "";
   display: block;
   clear: both;
@@ -35,7 +35,7 @@ html,body{
   line-height: 40px;
   margin: 0 20px;
 }
-#first .kuang1{
+#first .ct1{
   width: 960px;
   margin: 0 auto;
 }
@@ -46,17 +46,17 @@ html,body{
   width: 100%;
   position: relative;
 }
-.kuang1{
+.ct1{
   text-align: center;
   position: relative;
   top:90%;
 }
-.kuang1 h1{
+.ct1 h1{
   color: red;
   font-size: 50px;
   font-weight: bold;
 }
-.kuang1 a{
+.ct1 a{
   text-decoration: none;
   color: white;
   width:90px;
@@ -66,14 +66,14 @@ html,body{
   display: inline-block;
   line-height: 35px;
 }
-.kuang1 a:hover{
+.ct1 a:hover{
   background-color:#ef4848;
 }
 #second{
   background: #ccc;
 
 }
-.kuang2{
+.ct2{
   width: 960px;
   margin: 0 auto;
   text-align: center;
@@ -95,12 +95,12 @@ html,body{
   width: 300px;
   margin: 0 9px;
 }
-.kuang3{
+.ct3{
   width: 960px;
   margin: auto;
   text-align: center;
 }
-.kuang3:after{
+.ct3:after{
   clear: both;
   display: block;
   content: "";
@@ -123,7 +123,7 @@ html,body{
   background: #ccc;
   padding-bottom: 150px;
 }
-.kuang4{
+.ct4{
   width: 960px;
   margin: 0 auto;
   text-align:center;
@@ -148,10 +148,10 @@ clear: both;
 .box3 {
   margin-left: -3px;
 }
-.kuang4 h1{
+.ct4 h1{
 padding-top: 115px;
 }
-.kuang5{
+.ct5{
   width: 960px;
   margin: 0 auto;
   position: relative;
@@ -187,7 +187,7 @@ padding-top: 115px;
 .box4 .words2,.pic5{
   float: right;
 }
-.kuang5 h1{
+.ct5 h1{
   text-align: center;
   margin: 115px 0;
 }
@@ -217,23 +217,23 @@ padding-top: 115px;
   width: 100%;
   height: 100%;
 }
-.kuang6{
+.ct6{
   width :960px;
   margin: 20px auto;
 }
-.kuang6:after{
+.ct6:after{
   content: "";
   display: block;
   clear: both;
 }
-.kuang6 p{
+.ct6 p{
   color: #ccc;
   text-align: center;
   font-size: 100px;
   font-weight: bold;
   /*padding-top: 127px;*/
 }
-.shuru1 input{
+.input1 input{
   padding: 20px;
   width: 450px;
   height: 10px;
@@ -249,7 +249,7 @@ padding-top: 115px;
 .former{
   position: relative;
 }
-.shuru2 textarea{
+.input2 textarea{
   width: 450px;
   height: 200px;
   float: left;
@@ -258,14 +258,14 @@ padding-top: 115px;
   padding: 20px 10px;
 
 }
-.shuru2{
+.input2{
   position: absolute;
   top: 20px;
   left: 505px;
   height: 30px;
   float: right;
 }
-.anniu input{
+.submit input{
   padding: 20px 33px;
   border-radius: 6px;
   margin-bottom: 20px;
