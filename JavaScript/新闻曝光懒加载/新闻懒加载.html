@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>新闻无限加载+瀑布流+jsonp</title>
+    <style media="screen">
+      #news-ct{
+        max-width: 900px;
+        border: 1px solid #ccc;
+        margin: 0 auto;
+      }
+      #load{
+        border: 1px solid #ccc;
+        width:20px;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="news-ct">
+
+    </div>
+    <div id="load"></div>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+    <script type="text/javascript">
+
+    // <!-- 伪代码思路：
+    //
+    // 1,获取数据page = 1;10条数据；
+    // 2，操作dom将数据拼装并放到页面
+    // 3，瀑布流排版
+    // 4，page++
+    //
+    // 当页面滚动（后者条件出发时）
+    // 1,获取数据page的10条数据；
+    // 2，操作dom将数据拼装并放到页面
+    // 3，瀑布流排版
+    // 4，page++ -->
+
+    var  nodeWidth = $nodes.outerWidth(true),
+         boxNumber = parseInt($(window).width()/nodeWidth), //parseInt()是取整数的意思;
+         culSumHeight = [];
+
+    for(var i=0; i<boxNumber; i++){
+      culSumHeight.push(0);
+    }
+
+
+
+    function dosth(){
+      $.ajax({
+        url: 'http://platform.sina.com.cn/slide/album_tech',
+        type: 'get',
+        dataType: 'jsonp',
+        jsonp: 'jsoncallback',
+        data: {
+          app_key: '1271687855',
+          format: 'json',
+          size: 'img',
+          num: perPageCount,
+          page: curPage
+        },
+        success: function(ret){
+          if(ret.status.code == 0){
+            // callback(ret.data);
+            var dataArr = ret.data;
+            curPage++;
+            var $nodes = renderDate(dataArr);
+            render($nodes);
+          }
+        }
+      })
+    }
+
+    var renderDate = function(items){
+      var html = '';
+      var $nodes;
+      for(var i=0; i<items.length; i++){
+        html += '<li class="item">';
+        html += '<a href="#" class="link"><img src=" ' + items[i].img_url + '"></a>';
+        html += '<h4 class="header">'+items[i].short_name +'</h4>';
+        html += '<p class="desp">'+items[i].short_intro+'</p>';
+        html += '</li>';
+      }
+      $nodes = $(html);
+      $('#news-ct').append($nodes);
+      return $nodes;
+    }
+
+
+
+      var $target = $('#load');
+      check();
+      $(window).on('scroll',check);
+        //check本身就是函数，直接写即可，另外这里不能加括号(加上括号就变为值)
+
+      function check(){
+        $('.ct img').not('.load').each(function(){
+          if(isShow($target)){
+            dosth()
+          }
+        })
+      }
+
+      // function showImg($imgs){
+      //   $imgs.each(function(){
+      //     var url = $(this).attr('data-src');
+      //     $(this).attr('src',url);
+      //     $(this).addClass('load');
+      //   })
+
+      function isShow($node){
+        var scrollTop = $(window).scrollTop(),
+            offsetTop = $node.offset().top,
+            nodeHeight = $node.height(),
+            windowHeight = $(window).height();
+      if(windowHeight + scrollTop > offsetTop && scrollTop < offsetTop + nodeHeight){
+        return true;
+      }else{
+        return false;
+      };
+    };
+
+    function render($nodes){
+      var  nodeWidth = $nodes.outerWidth(true),
+           boxNumber = parseInt($(window).width()/nodeWidth), //parseInt()是取整数的意思;
+      if(culSumHeight.length>0){
+        for(var i=0; i<boxNumber; i++){
+          culSumHeight.push(0);
+        }
+      }
+
+      $nodes.each(function(){
+        var $cur = $(this);
+        var idx = 0;
+        var minSumHeight = culSumHeight[0];
+
+        for(var i=0; i<culSumHeight.length; i++){
+          if(culSumHeight[i] < minSumHeight){
+            idx = i;
+            minSumHeight = culSumHeight[i];
+          }
+        }
+        $cur.css({
+          'left': nodeWidth*idx,
+          'top': minSumHeight
+      });
+        culSumHeight[idx] = culSumHeight[idx] + $cur.outerHeight(true);
+      })
+    }
+    render();
+    // $(window).on('resize',function(){
+    //   render();
+    // })
+
+    </script>
+  </body>
+</html>
