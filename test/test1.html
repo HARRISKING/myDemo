@@ -85,36 +85,72 @@
                 // console.log(arr2) // [3,1,2]
                 // console.log(arr)  // [3,1,0,-1,-2,2,-5]
 
-                var obj1 = {
-                    name: "harrisking",
-                    age: "23",
-                    sex: "男",
-                    sth:{
-                        name:"asdfa",
-                        age:"asf"
-                    }
-                }
+                // var obj1 = {
+                //     name: "harrisking",
+                //     age: "23",
+                //     sex: "男",
+                //     sth:{
+                //         name:"asdfa",
+                //         age:"asf"
+                //     }
+                // }
 
-                function shadowCopy(object){
-                    var newObj = {};
-                    for(key in object){
-                        if(typeof(object[key]==="object")) {
-                            newObj = shadowCopy(object[key])
-                        }else{
-                            newObj[key] =object[key];
-                        }
-                    return newObj
-                }
-                console.log(shadowCopy(obj1));
-                var obj1 = {
-                    name: "harrisking",
-                    age: "23",
-                    sex: "男",
-                    sth:{
-                        name:"asdfa",
-                        age:"43534543"
-                    }
-                }
+                // function shadowCopy(object){
+                //     var newObj = {};
+                //     for(key in object){
+                //         if(typeof(object[key]==="object")) {
+                //             newObj = shadowCopy(object[key])
+                //         }else{
+                //             newObj[key] =object[key];
+                //         }
+                //     return newObj
+                // }
+                // console.log(shadowCopy(obj1));
+                // var obj1 = {
+                //     name: "harrisking",
+                //     age: "23",
+                //     sex: "男",
+                //     sth:{
+                //         name:"asdfa",
+                //         age:"43534543"
+                //     }
+                // }
+
+                // var a=453;
+                // var b = a;
+                // console.log(a);//453
+                // console.log(b);//453
+                // a = 100;
+                // console.log(a);//100
+                // console.log(b);//453
+
+
+    // var obj2 = obj;
+
+    // console.log(obj);
+    // console.log(obj2);
+    // obj.sth.age = 234234;
+    // console.log(obj);
+    // console.log(obj2);
+
+    // var obj = {
+    //     name:'har',
+    //     sth:{
+    //         age:100
+    //     }
+    // } 
+    // function deepCopy(){
+    //     var newObj = [];
+    //     for(var key in obj){
+    //         if(typeof(obj[key] === 'object')){
+    //             newObj[key] = deepCopy(obj[key]);
+    //         }else{
+    //             newObj[key] = obj[key];
+    //         }
+    //     }
+    //     return newObj;
+    // }
+
         </script>
     </body>
 </html>
