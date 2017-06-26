@@ -1,15 +1,20 @@
 {
   "name": "gulp3",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"成功啦成功啦\" && exit 1",
+    "haha": "mkdir app && cd app && touch hahaha1.js",
+    "delete": "rm -rf app"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.12"
-  }
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.12"
+  },
+  "description": ""
 }

@@ -1,0 +1,45 @@
+.box-all{
+  width: 600px;
+  margin:0 auto;
+  position: relative;
+  box-shadow: 2px 2px 8px #999;
+  border-radius: 5px;
+}
+.box-all:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.box{
+  float:left;
+  width: 70px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+}
+.box:hover{
+  background-color: #999;
+}
+.box2:hover{
+  background-color: green;
+}
+
+.box-pull{
+  position: absolute;
+  top: 37px;
+  left: 143px;
+  height: 100px;
+  width: 150px;
+  display: none;
+}
+.box2{
+  height: 33px;
+  line-height: 33px;
+  padding-left: 10px;
+  box-shadow: 2px 2px 8px #999;
+
+}
+
+.box-all>div:hover +.box-pull{
+  display: block;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+                // function sumOfSquares(){
+                //     var array= [];
+                //     for(var i=0; i<arguments.length; i++){
+                //         array.push(arguments[i]*arguments[i])
+                //     }
+                //     return array;
+                // }
+                // var result = sumOfSquares(2,3,4)
+                // var result2 = sumOfSquares(1,3)
+                // console.log(result)  //29
+                // console.log(result2)  //10
+                // var a = 1;
+
+                // function fn(){
+                //     var a;
+                //     var a;
+                //     function fn2(){
+                //         console.log(a)
+                //         a = 20
+                //     }
+                //     console.log(a)
+                //     a = 5
+                //     console.log(a)
+                //     a++
+                    
+                //     fn3()//200
+                //     fn2()//20
+                //     console.log(a)//undefined
+
+
+                // }
+
+                // function fn3(){
+                //     console.log(a)
+                //     a = 200
+                // }
+
+                // fn()
+                // console.log(a)//1
+
+                // var sum = 1;
+                // function recursion(n){
+                //     if(n !== 1){
+                //         sum *= n *(n-1);
+                //         recursion(n-2);
+                //     }else{
+                //         return sum;
+                //     }
+                //     return sum;
+                // }
+                // console.log(recursion(5))
+
+                // var arr = [3,1,0,-1,-3,2,-5]
+                // function filter(arr){
+                //     for(var i=0; i<arr.length; i++){
+                //         if(arr[i]<=0){
+                //             arr.splice(i,1);
+                //             filter(arr);
+                //         }
+                //     }
+                //     return arr;
+                // }
+                // filter(arr)
+                // console.log(arr) // [3,1,2]
+
+                // var arr = [3,1,0,-1,-3,2,-5]
+                // function filter(arr){
+                //     var arr2 = [];
+                //     for(var i=0; i<arr.length; i++){
+                //         if(arr[i]>0){
+                //             arr2.push(arr[i]);
+                //         }
+                //     }
+                //     return arr2;
+
+                // }
+                // var arr2 = filter(arr)
+                // console.log(arr2) // [3,1,2]
+                // console.log(arr)  // [3,1,0,-1,-2,2,-5]
+
+                var obj1 = {
+                    name: "harrisking",
+                    age: "23",
+                    sex: "男",
+                    sth:{
+                        name:"asdfa",
+                        age:"asf"
+                    }
+                }
+
+                function shadowCopy(object){
+                    var newObj = {};
+                    for(key in object){
+                        if(typeof(object[key]==="object")) {
+                            newObj = shadowCopy(object[key])
+                        }else{
+                            newObj[key] =object[key];
+                        }
+                    return newObj
+                }
+                console.log(shadowCopy(obj1));
+                var obj1 = {
+                    name: "harrisking",
+                    age: "23",
+                    sex: "男",
+                    sth:{
+                        name:"asdfa",
+                        age:"43534543"
+                    }
+                }
+        </script>
+    </body>
+</html>

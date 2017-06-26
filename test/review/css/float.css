@@ -1,0 +1,15 @@
+.box-all{
+  border: 1px solid red;
+  overflow: hidden;
+}
+/*.box-all:after{
+  display: block;
+  clear: both;
+  content:"";
+}*/
+.box1{
+  border: 1px solid blue;
+  width: 200px;
+  height: 200px;
+  float: left;
+}

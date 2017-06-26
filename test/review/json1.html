@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            // var str = '{"name":"harrisking","age":"23","sex":"男"}';
+            // var obj = JSON.parse(str);
+            // var str1 = JSON.stringify(obj);
+            // console.log(obj);
+            // console.log(str1);
+
+            // function plus(a,b){
+            //     return a+b;
+            // }
+            // console.log(plus(5,4));
+
+            // function plus(a,b,c){
+            //     return a+b+c;
+            // }        
+            // console.log(plus(4,5,6))
+
+            // (function plus(){
+            //     var sum=0;
+            //     for(var i = 0; i<arguments.length; i++){
+            //         sum = sum + arguments[i];
+            //     }
+            //     return sum
+            // })(3,23,35,5,3,2,4)
+            var sum;
+            function recursion(n){
+                if(n === 1){
+                   return sum; 
+                }else{
+                    sum = n * (n - 1);
+                    console.log(sum);
+
+                    recursion(n-1);
+                }
+                sum *= sum;
+            };
+            console.log(recursion(5));
+            console.log(sum);
+
+            </script>
+    </body>
+</html>
