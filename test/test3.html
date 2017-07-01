@@ -7,11 +7,74 @@
     </head>
     <body>
 		<script>
-			//正则表达式两种写法：
-			//1,构造函数法：
-			var reg = new RegExp(/\d/g);
-			//2,字面量法：
-			var reg = /\d/g
+			// //正则表达式两种写法：
+			// //1,构造函数法：
+			// var reg = new RegExp(/\d/g);
+			// //2,字面量法：
+			// var reg = /\w/g;
+			// console.log(reg.test('asd'));
+			// console.log(reg.exec('adf234df32'));
+			// console.log('2323f23asdf'.search(/f/g));
+			// console.log("sdfsd");
+			// function trim(str){
+			// 	var reg = new RegExp(/^\s+|\s+$/g);
+			// 	if(reg.test(str)){
+			// 		str.replace(str[reg.exec(str)],"-");
+			// 		console.log(str[reg.exec(str)]);
+			// 	}
+			// 	console.log(str);
+
+			// 	return str;
+			// };
+			// function trim(str){
+			// 	return str.replace(/^\s+|\s+$/g,"")
+			// }
+			// var str1 = " sdfsd	";
+			// console.log(trim(str1));
+
+			// function isEmail(str){
+			// 	var reg = new RegExp(/\S+[@]{1}(\S)+[\.]{1}(\S)+\w+/);
+			// 	console.log(reg.test(str));
+			// }
+			// isEmail('dsfdfgs@gdfg.COM')
+
+			// function isEmail(str){
+			// 	var reg = new RegExp(/\S+[@]{1}(\S)+[\.]{1}(\S)+\w+/);
+			// 	console.log(reg.test(str));
+			// }
+			// isEmail('dsfdfgs@gdfg.COM')
+
+			// function isNumber(str){
+			// 	var reg = new RegExp(/^[13]+\d{9}$/g);
+			// 	console.log(reg.test(str));
+			// }
+			// isNumber('18788440410');
+			// function isValidUserName(str){
+			// 	var reg = /^\w{6,20}(\S)$/g;
+			// 	console.log(reg.test(str));
+			// }
+			// isValidUserName('asdfaddfgsg3453_')
+			// function isValidPassWord(str){
+			// 	if(str.length<6||str.length>20){
+			// 		console.log('false');
+			// 	}else if(/\W/.test(str)){
+			// 		console.log('false');
+			// 	}else if(/(^[a-z]+$)|(^[A-Z]+￥)|(^\d+$)|(^_+$)/g.test(str)){
+			// 		console.log('false');
+
+			// 	}
+			// 	return str;
+			// }
+			// console.log(isValidPassWord('23423422342dsfgd'));
+			var str = 'hello "hunger" , hello "world"';
+			var pat = /".*? "/g;
+			console.log(str.match(pat)) ;
+
+
+
+
+
+
 		</script>
     </body>
-</html>
+</html>	
