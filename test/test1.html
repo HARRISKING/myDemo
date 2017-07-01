@@ -213,17 +213,126 @@
 // var b = "abcddcba";
 // f1(b);
     
-    function f2(string){
-        var maxStr,
-        idx = 0,
-        array = string.split(''),
-        len = array.length;
-        for(var i=0; i<len; i++){
-            if(arr[])
+    // function f2(string){
+    //     var maxStr,
+    //     idx = 0,
+    //     array = string.split(''),
+    //     len = array.length;
+    //     for(var i=0; i<len; i++){
+    //         if(arr[])
+    //     }
+
+
+    // }
+
+
+
+
+        // // 冒泡排序：
+        //     var arr1 = [454,23234,12,0,567,111,12,34,2,23,452,3];
+        //     function bobble(arr){
+        //         var len = arr.length-1;
+        //         for(var j=0; j<len; j++){
+        //             for(i=0; i<len-j; i++ ){
+        //                 if(arr[i]>arr[i+1]){
+        //                     turn(arr,i,i+1);
+        //                 }
+        //             }
+        //         }
+        //         return arr;
+        //     }
+        //     function turn(array,d1,d2){
+        //        var turnLocal = array[d1];
+        //        array[d1] = array[d2];
+        //        array[d2] = turnLocal;
+        //        return array;
+        //     }
+        //     console.log(bobble(arr1));
+
+        // function getRandom(min,max){
+        //     return num = Math.floor(min + (max - min +1)*Math.random());
+        // } 
+        // console.log(getRandom(6,9));
+
+        // function getRandStr(len){
+        //     var str = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+        //     var array = [];
+        //     for(var i=0; i<len; i++){
+        //         var idx = Math.floor(62*Math.random());
+        //         array.push(str[idx]);
+        //     }
+        //     return array.join();
+        // }
+        // console.log(getRandStr(15));
+
+        // function getRandColor(){
+        //     var str = '0123456789abcdef';
+        //     var array = [];
+
+        //     for(var i=0; i<6; i++){
+        //         var idx = Math.floor(16*Math.random());
+        //         console.log(idx);
+        //         array.push(str[idx]);
+        //     }
+        //     return '#'+array.join('');
+        // }
+        // console.log(getRandColor());
+        // function eq(array){
+        //     for(var i=0; i<array.length; i++){
+        //         array[i] = array[i]*array[i]; 
+        //     }
+        //     return array;
+        // }
+        // var array2 = [2,3,4,23,343];
+        // console.log(eq(array2));
+
+        // function filterPositive(array){
+        //     var array1 = [];
+        //     for(var i=0; i<array.length; i++){
+        //         if(array[i]>0 && typeof(array[i])=='number'){
+        //             array1.push(array[i]);
+        //         }
+        //     }
+        //     return array1;
+        // }
+        // var arr = [1,23,43,-54,-12,'adsj',true];
+        // console.log(filterPositive(arr));
+        // var str = "2017-11-1";
+        // function getChIntv(str){
+        //     var setDateData = Date.parse(str);
+        //     var todayData = Date.now();
+        //     var len =setDateData -todayData;
+        //     console.log(len);
+        //     var yearData = Math.floor(len/1000/60/60/24/365);
+        //     console.log(yearData);
+        //     var monthData =Math.floor((len-(yearData*356*24*3600*1000))/1000/60/60/24/30); 
+        //     console.log(monthData);
+        //     var dateData =Math.floor((len-(yearData*356*24*3600*1000)-(monthData*1000*3600*24*30))/1000/60/60/24);
+        //     console.log(dateData);
+ 
+        // }
+        // getChIntv(str)
+        const str = "2017-11-01";
+        function getChsDate(str){
+            var arr = str.split('-');
+            var year = [];
+            var month = [];
+            console.log(arr);
+            const dic = ["零","一","二","三","四","五","六","七","八","九"];
+            for(var i=0; i<4; i++){
+                yearSData = year.push(dic[arr[0].split('')[i]]);
+            }
+            console.log(year.join(""));
+            for(var j=0; j<2; j++){
+                monthData = month.push(dic[arr[1].split('')[j]]);
+            }
+            console.log(month.join(""));
+
+
+
         }
-
-
-    }
+        getChsDate(str);
+         
         </script>
     </body>
 </html>
