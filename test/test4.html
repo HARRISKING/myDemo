@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>闭包</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link href="css/style.css" rel="stylesheet">-->
+    </head>
+    <body>
+        <script>
+
+            // function example(){
+            //     var local = "变量";
+            //     function bar(){
+            //         console.log(local);
+            //     }
+            //     return bar;
+            // }
+            // var a = example();
+            // console.log(a());
+
+            // console.log(1);
+            // setTimeout(function(){
+            //     console.log(2);
+            // },0);
+            // console.log(3);
+
+            // function task(callback){
+            //     var result =setTimeout(function(){
+            //         callback("异步执行结果")
+            //     },3000)
+            //     return result
+            // }
+            // function next(){
+            //     console.log("下一个");
+            // }
+            // task(function callback(result){
+            //     console.log(result);
+            // }) 
+            // next();
+
+            // var age = 23;
+            // // function printAge(){
+            // //     console.log(age);
+            // // }
+            // // console.log(window.age);
+            // // console.log(printAge());
+            // alert(age);
+            // prompt(age);
+            // confirm(age);
+            //方法一：
+
+            // var fnArr = [];
+            // for(var i=0; i<10; i++){
+            //     (function(){
+            //         var j = i;
+            //         fnArr[i] = function(){
+            //             return j;
+            //         };
+            //     })();
+            // }
+            // console.log(fnArr[3]());
+
+            // 方法二：
+            // var fnArr = [];
+            // for(var i=0; i<10; i++){
+            //     (function(i){
+            //         fnArr[i] = function(){
+            //             return i;
+            //         };
+            //     })(i)
+
+            // }
+            // console.log(fnArr[3]());
+
+            // var a = 1;
+            // setTimeout(function(){
+            //     a=2;
+            //     console.log(a);
+            // },0);
+            // var a;
+            // console.log(a);
+            // a=3;
+            // console.log(a);
+
+
+            // var flag = true;
+            // setTimeout(function() {
+            //     flag =false;
+            // }, 0);
+            // while(flag){}
+            // console.log(flag);
+
+            for(var i=0; i<5; i++){
+                (function(i){
+                    setTimeout(function() {
+                        console.log('delayer:'+i);
+                    }, 0);
+                })(i)
+
+                console.log(i);
+            }
+
+
+        </script>
+    </body>
+</html>
