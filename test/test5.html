@@ -12,12 +12,17 @@
         <script>
             var state = true;
             document.getElementsByClassName('btn')[0].addEventListener('click',function(e){
-                if(state){
-                    state = false;
-                    setTimeout(function() {
-                        document.getElementsByClassName('box')[0].style.background='blue';
-                    },2000);
-                    state = true;
+                var url = 'http://api.jirengu.com/weather.php?city='+''
+
+                var xhr =XMLHttpRequest();
+                xhr.open('GET','http://api.jirengu.com/weather.php?city=杭州',true)
+
+                // if(state){
+                //     state = false;
+                //     setTimeout(function() {
+                //         document.getElementsByClassName('box')[0].style.background='blue';
+                //     },2000);
+                //     state = true;
 
                 
                 }

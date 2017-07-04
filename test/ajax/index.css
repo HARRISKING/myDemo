@@ -1,0 +1,24 @@
+body,form,input,div,p,li,ul{
+    margin: 0;
+    padding: 0;
+}
+.box-all{
+    border: 1px solid #333;
+    width: 500px;
+    margin: 0 auto;
+    display: -webkit-flex;
+    justify-content: space-around;
+}
+.city-name{
+    width: 200px;
+    height: 30px;
+}
+.btn-sub{
+    width: 50px;
+    height: 30px;
+}
+.show-info{
+    width: 450px;
+    height: 200px;
+    border: 1px solid red;
+}
